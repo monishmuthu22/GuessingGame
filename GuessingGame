@@ -1,0 +1,16 @@
+# Guessing Game
+import random
+name = input("Please enter your name to continue: ")
+number = random.randint(0, 10)
+i = 1
+while i <= 3:
+    guess = input(" Enter a number between 0 - 10: ")
+    if int(guess) == number:
+        print(f'Congratulations {name} you have successfully guessed the number!')
+        quit()
+    else:
+        i = i + 1
+        print("Try to guess again: ")
+else:
+    print(f'{name} you are clearly bad at guessing you failed to guess the number')
+    quit()
